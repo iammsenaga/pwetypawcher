@@ -58,6 +58,10 @@ node --test tests/counter.test.cjs
 
 The tests cover draw boundaries, replacement behavior, persistence, changing the population, history rendering and independent clearing. They use a lightweight DOM/storage harness; they do not establish statistical quality or replace testing in a real browser. GitHub Actions runs the same checks.
 
+## License
+
+Released under the [MIT License](LICENSE). You may use, modify and redistribute the software, including commercially, provided you retain the copyright and license notice.
+
 ## Author
 
 [Dr. Osasenaga David Evbayiro](https://github.com/iammsenaga) · [Portfolio](https://senagadavid.netlify.app/)
