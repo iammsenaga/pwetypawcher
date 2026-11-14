@@ -2,6 +2,8 @@
 
 **A lightweight browser tool for random sampling with replacement.**
 
+[Try the live demo](https://iammsenaga.github.io/pwetypawcher/) · [Automated checks](https://github.com/iammsenaga/pwetypawcher/actions/workflows/checks.yml)
+
 Choose an upper limit, draw a number from 1 to that limit and optionally save the result. Previously drawn or saved numbers remain eligible on every subsequent draw.
 
 ## Run locally
