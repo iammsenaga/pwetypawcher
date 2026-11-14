@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PwetyPawcher Counter</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Random Sampling With Replacement</p>
+        <h1>PwetyPawcher Counter</h1>
+        <p class="hero-copy">
+          Generate a random number from <strong>1</strong> to your chosen limit,
+          save any result you want, and keep every number equally likely on the
+          next draw.
+        </p>
+
+        <div class="control-grid">
+          <label class="field-card" for="limitInput">
+            <span class="field-label">Upper limit</span>
+            <input
+              id="limitInput"
+              type="number"
+              min="1"
+              step="1"
+              inputmode="numeric"
+              value="34"
+            />
+            <!-- <small>Default is 34, but you can change it anytime.</small> -->
+          </label>
+
+          <article class="stat-card">
+            <span class="field-label">Current mode</span>
+            <strong>Sampling with replacement</strong>
+            <small>
+              Saved numbers stay in history only. They are not removed from the
+              draw pool. 
+
+            </small>
+          </article>
+        </div>
+
+        <section class="result-panel" aria-live="polite">
+          <p class="result-label">Latest number</p>
+          <div class="result-value" id="resultValue">--</div>
+          <p class="result-note" id="resultNote">
+            Tap the button to generate a random sample.
+          </p>
+        </section>
+
+        <div class="action-row">
+          <button class="primary-button" id="drawButton" type="button">
+            Pick Random Number
+          </button>
+          <button class="secondary-button" id="saveButton" type="button" disabled>
+            Save This Number
+          </button>
+        </div>
+
+        <section class="mini-stats" aria-label="Sampling stats">
+          <article>
+            <span>Total draws</span>
+            <strong id="drawCount">0</strong>
+          </article>
+          <article>
+            <span>Saved samples</span>
+            <strong id="savedCount">0</strong>
+          </article>
+        </section>
+      </section>
+
+      <section class="history-grid">
+        <article class="panel-card">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Saved results</p>
+              <h2>Stored samples</h2>
+            </div>
+            <button class="text-button" id="clearSavedButton" type="button">
+              Clear saved
+            </button>
+          </div>
+          <p class="panel-copy">
+            Record of selected numbers.
+          </p>
+          <ol class="history-list" id="savedList"></ol>
+          <p class="empty-state" id="savedEmpty">
+            No saved samples yet.
+          </p>
+        </article>
+
+        <article class="panel-card">
+          <div class="panel-heading">
+            <div>
+              <p class="panel-kicker">Draw activity</p>
+              <h2>Recent generated numbers</h2>
+            </div>
+            <button class="text-button" id="clearHistoryButton" type="button">
+              Clear history
+            </button>
+          </div>
+          <p class="panel-copy">
+            This shows recent draws only and does not affect probability.
+          </p>
+          <ol class="history-list" id="historyList"></ol>
+          <p class="empty-state" id="historyEmpty">
+            No numbers generated yet.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
